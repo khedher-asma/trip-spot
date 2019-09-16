@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>TRIP SPOT</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!----------------------------- include bootstrap ----------------------------->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!----------------------------- include css file ----------------------------->
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <!----------------------------- Montserrat font ----------------------------->
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <!----------------------------- include jQuery ----------------------------->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!----------------------------- include fontawesome ----------------------------->
+    <script src="https://kit.fontawesome.com/206dd01186.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#toggle").on("click", function () {
+                $("#navbarNav").toggle().toggleClass("container hidden-div"),
+                    $('#home').toggleClass("content-pink-color"),
+                    $('.not-home').toggleClass("content-darkGrey-color")
+
+            });
+            $("#first-indicator").on("click", function () {
+                $("#first-indicator").css("background-color", "#F4B200"),
+                    $("#second-indicator").css("background-color", "white"),
+                    $("#third-indicator").css("background-color", "white")
+            })
+            $("#second-indicator").on("click", function () {
+                $("#first-indicator").css("background-color", "white"),
+                    $("#second-indicator").css("background-color", "#F4B200"),
+                    $("#third-indicator").css("background-color", "white")
+            })
+            $("#third-indicator").on("click", function () {
+                $("#first-indicator").css("background-color", "white")
+                $("#second-indicator").css("background-color", "white"),
+                    $("#third-indicator").css("background-color", "#F4B200")
+            })
+        });
+    </script>
+</head>
+
+<body>
+    <!----------------------------- header ----------------------------->
+    <header id="index">
+        <div class="ombre">
+
+            <!----------------------------- phone contact ----------------------------->
+            <div class="container text-right pt-3 phone-contact">
+                <span class="fas fa-phone fa-rotate-90 content-white-color"></span> <span
+                    class="content-grey-color">+00(216) 53 000000</span>
+            </div>
+            <!----------------------------- //phone contact ----------------------------->
+
+            <!----------------------------- navbar ----------------------------->
+            <nav class="container navbar navbar-expand-lg the-nav">
+                <h1>
+                    <a class="navbar-brand" href="index.html">
+                        <span class="fab fa-free-code-camp"></span>
+                        <span class="content-white-color">Trip Spot</span>
+                    </a>
+                </h1>
+                <button class="navbar-toggler" id="toggle" type="button" style="background-color: #F4B200">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse  pt-2 nav-list-content" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link content-white-color" id="home" href="#">Home <span
+                                    class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link content-grey-color not-home" href="#aboutUS">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link content-grey-color not-home" href="#services">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link content-grey-color not-home" href="#stats">Stats</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link content-grey-color not-home" href="#testimonials">Testimonials</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link content-grey-color not-home" href="#">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <!----------------------------- //navbar ----------------------------->
+
+            <!----------------------------- banner ----------------------------->
+            <div class="container">
+                <div class="row">
+                    <!----------------------------- country side ----------------------------->
+                    <div class="col-md-6 banner-country">
+                        <div id="carouselExampleIndicators" class="carousel slide">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div>
+                                        <h3 class="content-white-color country">China</h3>
+                                    </div>
+                                    <div>
+                                        <h4 class="content-white-color text-center from">
+                                            <i class="fas fa-shekel-sign fa-3x"></i>
+                                            from
+                                        </h4>
+                                    </div>
+                                    <div class="text-center cost">
+                                        <i class="fas fa-dollar-sign"></i>
+                                        <span class="content-white-color">1000</span>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div>
+                                        <h3 class="content-white-color country">Japan</h3>
+                                    </div>
+                                    <div>
+                                        <h4 class="content-white-color text-center from">
+                                            <i class="fas fa-shekel-sign fa-3x"></i>
+                                            from
+                                        </h4>
+                                    </div>
+                                    <div class="text-center cost">
+                                        <i class="fas fa-dollar-sign"></i>
+                                        <span class="content-white-color">1200</span>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div>
+                                        <h3 class="content-white-color country">Korea</h3>
+                                    </div>
+                                    <div>
+                                        <h4 class="content-white-color text-center from">
+                                            <i class="fas fa-shekel-sign fa-3x"></i>
+                                            from
+                                        </h4>
+                                    </div>
+                                    <div class="text-center cost">
+                                        <i class="fas fa-dollar-sign"></i>
+                                        <span class="content-white-color">1400</span>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <ol class="carousel-indicators" id="banner-country-indicator">
+                                <li data-target="#carouselExampleIndicators" data-slide-to="0" id="first-indicator"
+                                    class="active">
+                                </li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="1" id="second-indicator">
+                                </li>
+                                <li data-target="#carouselExampleIndicators" data-slide-to="2" id="third-indicator">
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                    <!----------------------------- //country side ----------------------------->
+                    <!----------------------------- search side ----------------------------->
+                    <div class="col-md-6 banner-search">
+                        <div class="banner-search-ombre">
+                            <form action="#" method="POST">
+                                <h5 class="banner-search-ombre-h5">Search Our Tours</h5>
+                                <div>
+                                    <input type="text" name="location" placeholder="Search Locat" required />
+                                    <input type="text" name="price" placeholder="Price Range" required />
+                                </div>
+                                <button type="submit" class="btn banner-search-btn"> Search </button>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!----------------------------- //banner ----------------------------->
+        </div>
+    </header>
+    <!----------------------------- //header ----------------------------->
+    <!----------------------------- sections ----------------------------->
+
+    <!----------------------------- section1 ----------------------------->
+    <section class="section-one py-5" id="aboutUS">
+        <div class="container py-md-5">
+            <div class="row ">
+                <div class="col-lg-6 content-white-color">
+                    <h4 class="header-section-one mb-md-5">
+                        Winter Wonders and Delicious Detours
+                    </h4>
+                    <p class="parag-section-one">
+                        Donec malesuada ex sit amet pretium sid ornare. Nulla congue scelerisque tellus, utpretium nulla
+                        malesuada sedint. Suspendisse venenatis,Lorem ipsum dolor sit magna dolor.
+                    </p>
+                    <div class="mt-4">
+                        <a href="index.html" class="link-section-one btn">Read more</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-4">
+                    <img src="./images/ab1.jpg" alt="fluid image" class="image-section-one">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!----------------------------- //section1 ----------------------------->
+
+    <!----------------------------- section2 ----------------------------->
+    <section class="section-two py-5" id="services">
+        <div class="container py-md-5">
+            <h3 class="mb-3 mb-sm-5 section-two-h3 text-center">OUR SERVICES</h3>
+            <div class="row mb-5">
+                <div class="col-lg-4 col-md-6 text-center">
+                    <div>
+                        <i class="fas fa-h-square fa-3x content-yellow-color"></i>
+                    </div>
+                    <h4 class="section-two-h4 mt-3">Best Hotels</h4>
+                    <p class="section-two-p mt-3">
+                        Perspiciatis unde omnis iste natus doloret ipsum volupte ut accusal ntium dolor remque
+                        laudantium, totam dolor.
+                    </p>
+                </div>
+                <div class="col-lg-4 col-md-6 text-center">
+                    <div>
+                        <i class="fab fa-glide-g fa-3x content-yellow-color"></i>
+                    </div>
+                    <h4 class="section-two-h4 mt-3">Tourist Guide</h4>
+                    <p class="section-two-p mt-3">
+                        Perspiciatis unde omnis iste natus doloret ipsum volupte ut accusal ntium dolor remque
+                        laudantium, totam dolor.
+                    </p>
+                </div>
+                <div class="col-lg-4 col-md-6 text-center">
+                    <div>
+                        <i class="fas fa-fighter-jet fa-3x content-yellow-color"></i>
+                    </div>
+                    <h4 class="section-two-h4 mt-3">Flight Tickets</h4>
+                    <p class="section-two-p mt-3">
+                        Perspiciatis unde omnis iste natus doloret ipsum volupte ut accusal ntium dolor remque
+                        laudantium, totam dolor.
+                    </p>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="image1">
+                        <h4 class="image1-h4 text-center images-h4">CANADA TOURS</h4>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class=" col-12">
+                            <div class="image2">
+                                <h4 class=" text-center image2-h4 images-h4">ASIA TOURS</h4>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="row">
+                                <div class="col-md-6 ">
+                                    <div class="image3">
+                                        <h4 class="text-center image3-h4 images-h4">EUROPE TOURS</h4>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 ">
+                                    <div class="image4">
+                                        <h4 class="text-center image4-h4 images-h4">CANADA TOURS</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!----------------------------- //section2 ----------------------------->
+
+    <!----------------------------- section3 ----------------------------->
+    <section class="section-three" id="stats">
+        <div class="inner-section-three py-5">
+            <div class="container py-5">
+                <div class="row">
+                    <div class="col-lg-6 content-white-color">
+                        <h3 class="section-three-h3 mb-3">YEARS IN THE FIELD</h3>
+                        <p class="parag-section-three mb-3">Integer Pulvinar Leo Id Viverra Feugiat. Pellentesque Libero
+                            Justo, Semper At Tempus Vel,
+                            Ultrices In Ligula. Nulla Sollicit Sed.</p>
+                        <h4 class="section-three-h4">
+                            <span class="content-yellow-color">15+</span> Years of Experience
+                        </h4>
+                    </div>
+
+                    <div class="col-lg-6 mt-3 content-white-color">
+                        <div class="row">
+                            <div class="col-6 col-sm-4 text-center">
+                                <p>
+                                    Travel Joy
+                                </p>
+                                <h4 class="section-three-second-div-h4 mb-3">
+                                    12K
+                                </h4>
+                                <div>
+                                    <span class="round-space fas fa-users"></span>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-4 text-center">
+                                <p>
+                                    World Tours
+                                </p>
+                                <h4 class="section-three-second-div-h4 mb-3">
+                                    15k
+                                </h4>
+                                <div>
+                                    <span class="round-space fas fa-tasks"></span>
+                                </div>
+                            </div>
+                            <div class="col-6 col-sm-4 text-center">
+                                <p>
+                                    City Tours
+                                </p>
+                                <h4 class="section-three-second-div-h4 mb-3">
+                                    25k
+                                </h4>
+                                <div>
+                                    <span class="round-space fas fa-paste"></span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!----------------------------- //section3 ----------------------------->
+
+    <!----------------------------- section4 ----------------------------->
+    <section class="section-four py-5" id="team">
+        <div class="container py-md-5">
+            <h1 class="section-four-header text-center mb-5 ">OUR GUIDES</h1>
+            <div class="row">
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div>
+                        <img src="./images/t1.jpg" alt="the manager" class="section-four-images">
+                        <div class="section-four-content text-center py-3">
+                            <h3 class="section-four-h3 section-four-margin ">
+                                Tyson Amery
+                            </h3>
+                            <p class="section-four-margin">
+                                MANAGER
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <div>
+                        <img src="./images/t2.jpg" alt="director" class="section-four-images">
+                        <div class="section-four-content text-center py-3">
+                            <h3 class="section-four-h3 section-four-margin">
+                                Stas Melnik
+                            </h3>
+                            <p class="section-four-margin">
+                                DIRECTOR
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <div>
+                        <img src="./images/t3.jpg" alt="instructor" class="section-four-images">
+                        <div class="section-four-content text-center py-3">
+                            <h3 class="section-four-h3 section-four-margin">
+                                Lise Laurie
+                            </h3>
+                            <p class="section-four-margin">
+                                INSTRUCTOR
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <div>
+                        <img src="./images/t4.jpg" alt="manager" class="section-four-images">
+                        <div class="section-four-content text-center py-3">
+                            <h3 class="section-four-h3 section-four-margin">
+                                Effie Eleanora
+                            </h3>
+                            <p class="section-four-margin">
+                                MANAGER
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+    <!----------------------------- //section4 ----------------------------->
+
+    <!----------------------------- section5 ----------------------------->
+    <section class="py-5" id="gallery">
+        <div class="container py-md-5">
+            <h1 class="section-four-header text-center mb-5">TOUR GALLERY</h1>
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <div data-toggle="modal" data-target="#image-g1">
+                        <img src="./images/g1.jpg" class="section-four-images section-five-style">
+                        <div class="section-five-span text-center">HONEYMOON</div>
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="image-g1" tabindex="-1" role="dialog"
+                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <img src="./images/g1.jpg" class="section-four-images mb-4">
+                                    <div>
+                                        Nulla viverra pharetra se, eget pulvinar neque pharetra ac int. placerat
+                                        placerat dolor.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //Modal -->
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div data-toggle="modal" data-target="#image-g3">
+                        <img src="./images/g3.jpg" class="section-four-images section-five-style">
+                        <div class="section-five-span text-center">HOLIDAYS</div>
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="image-g3" tabindex="-1" role="dialog"
+                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <img src="./images/g3.jpg" class="section-four-images mb-4">
+                                    <div>
+                                        Nulla viverra pharetra se, eget pulvinar neque pharetra ac int. placerat
+                                        placerat dolor.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //Modal -->
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div data-toggle="modal" data-target="#image-g5">
+                        <img src="./images/g5.jpg" class="section-four-images section-five-style">
+                        <div class="section-five-span text-center">LUXURY</div>
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="image-g5" tabindex="-1" role="dialog"
+                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <img src="./images/g5.jpg" class="section-four-images mb-4">
+                                    <div>
+                                        Nulla viverra pharetra se, eget pulvinar neque pharetra ac int. placerat
+                                        placerat dolor.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //Modal -->
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div data-toggle="modal" data-target="#image-g2">
+                        <img src="./images/g2.jpg" class="section-four-images section-five-style">
+                        <div class="section-five-span text-center">FAMILY</div>
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="image-g2" tabindex="-1" role="dialog"
+                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <img src="./images/g2.jpg" class="section-four-images mb-4">
+                                    <div>
+                                        Nulla viverra pharetra se, eget pulvinar neque pharetra ac int. placerat
+                                        placerat dolor.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //Modal -->
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div data-toggle="modal" data-target="#image-g4">
+                        <img src="./images/g4.jpg" class="section-four-images section-five-style">
+                        <div class="section-five-span text-center">ADVENTURE</div>
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="image-g4" tabindex="-1" role="dialog"
+                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <img src="./images/g4.jpg" class="section-four-images mb-4">
+                                    <div>
+                                        Nulla viverra pharetra se, eget pulvinar neque pharetra ac int. placerat
+                                        placerat dolor.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //Modal -->
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div data-toggle="modal" data-target="#image-g6">
+                        <img src="./images/g6.jpg" class="section-four-images section-five-style">
+                        <div class="section-five-span text-center">ROMANTIC</div>
+                    </div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="image-g6" tabindex="-1" role="dialog"
+                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <img src="./images/g6.jpg" class="section-four-images mb-4">
+                                    <div>
+                                        Nulla viverra pharetra se, eget pulvinar neque pharetra ac int. placerat
+                                        placerat dolor.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //Modal -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!----------------------------- //section5 ----------------------------->
+
+    <!----------------------------- section6 ----------------------------->
+    <section class="py-5 section-four">
+        <div class="container py-md-5">
+            <h1 class="section-four-header text-center mb-5">TOUR PRICES</h1>
+            <div class="row">
+                <div class="col-6 col-md-3 mb-3">
+                    <div class="text-center mb-3">
+                        CHINA
+                    </div>
+                    <div class="section-six-position">
+                        <img src="./images/p1.jpg" class="section-six-images">
+                        <div class="section-six-prices">
+                            <i class="fas fa-dollar-sign" style="color: white;font-size: 12px"></i>1000
+                        </div>
+                        <div class="booking-div ">
+                            <h3 class="booking-div-h3 text-center content-white-color pt-1 py-sm-3 ">china</h3>
+                            <div class="text-center">
+                                <a href="#" class="text-center content-white-color booking-a">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 mb-3">
+                    <div class="text-center mb-3">
+                        MALAYSIA
+                    </div>
+                    <div class="section-six-position">
+                        <img src="./images/p2.jpg" class="section-six-images">
+                        <div class="section-six-prices">
+                            <i class="fas fa-dollar-sign" style="color: white;font-size: 12px"></i>1100
+                        </div>
+                        <div class="booking-div">
+                            <h3 class="booking-div-h3 text-center content-white-color pt-1 py-sm-3">Malysia</h3>
+                            <div class="text-center">
+                                <a href="#" class="text-center content-white-color booking-a">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="text-center mb-3">
+                        JAPAN
+                    </div>
+                    <div class="section-six-position">
+                        <img src="./images/p3.jpg" class="section-six-images">
+                        <div class="section-six-prices">
+                            <i class="fas fa-dollar-sign" style="color: white;font-size: 12px"></i>1200
+                        </div>
+                        <div class="booking-div">
+                            <h3 class="booking-div-h3 text-center content-white-color pt-1 py-sm-3">Japan</h3>
+                            <div class="text-center">
+                                <a href="#" class="text-center content-white-color booking-a">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="text-center mb-3">
+                        SINGAPORE
+                    </div>
+                    <div class="section-six-position">
+                        <img src="./images/p4.jpg" class="section-six-images">
+                        <div class="section-six-prices">
+                            <i class="fas fa-dollar-sign" style="color: white;font-size: 12px"></i>1300
+                        </div>
+                        <div class="booking-div">
+                            <h3 class="booking-div-h3 text-center content-white-color pt-1 py-sm-3">Singapore</h3>
+                            <div class="text-center">
+                                <a href="#" class="text-center content-white-color booking-a">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!----------------------------- //section6 ----------------------------->
+
+    <!----------------------------- section7 ----------------------------->
+    <section class="py-5 section-seven" id="testimonials">
+        <div class="container py-md-5">
+            <h3 class="text-center mb-3 mb-sm-5 content-white-color section-seven-header">CLIENT REVIEWS</h3>
+            <div class="row">
+                <div class="col-sm-6 col-lg-4 mb-5">
+                    <div class="section-seven-quote">
+                        <p style="color:#696f76">
+                            <span class="fas fa-quote-left content-white-color"></span>
+                            Lorem Ipsum has been the industry's standard since the 1500s. Praesent ullamcorper dui
+                            turpis.Nulla non laoreet eleifend.
+                            <span class="fas fa-quote-right content-white-color"></span>
+                        </p>
+                    </div>
+                    <div class="text-right mb-3"><img src="./images/te1.jpg" class="section-seven-image"> </div>
+                    <h3 class="text-right content-white-color section-seven-h">Jenifer Burns</h3>
+                </div>
+                <div class="col-sm-6 col-lg-4 mb-5">
+                    <div class="section-seven-quote">
+                        <p style="color:#696f76">
+                            <span class="fas fa-quote-left content-white-color"></span>
+                            Lorem Ipsum has been the industry's standard since the 1500s. Praesent ullamcorper dui
+                            turpis.Nulla non laoreet eleifend.
+                            <span class="fas fa-quote-right content-white-color"></span>
+                        </p>
+                    </div>
+                    <div class="text-right mb-3"><img src="./images/te2.jpg" class="section-seven-image"> </div>
+                    <h3 class="text-right content-white-color  section-seven-h">Abraham Smith</h3>
+                </div>
+                <div class="col-sm-6 col-lg-4">
+                    <div class="section-seven-quote">
+                        <p style="color:#696f76">
+                            <span class="fas fa-quote-left content-white-color"></span>
+                            Lorem Ipsum has been the industry's standard since the 1500s. Praesent ullamcorper
+                            dui
+                            turpis.Nulla non laoreet eleifend.
+                            <span class="fas fa-quote-right content-white-color"></span>
+                        </p>
+                    </div>
+                    <div class="text-right mb-3"><img src="./images/te3.jpg" class="section-seven-image"> </div>
+                    <h3 class="text-right content-white-color  section-seven-h">Jenifer Burns</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!----------------------------- //section7 ----------------------------->
+
+    <!----------------------------- //section8 ----------------------------->
+    <section class="py-5 section-eight" id="contactUs">
+        <div class="container py-md-5">
+            <h1 class="section-four-header text-center mb-5">GET IN TOUCH WITH US</h1>
+            <div class="row">
+                <div class="col-sm-6 col-md-4">
+                    <div class="text-center">
+                        <div class="mb-3">
+                            <i class="fas fa-map-marker-alt fa-2x content-yellow-color"></i>
+                        </div>
+                        <h4 class="section-two-h4 mb-3">Location</h4>
+                        <p class="section-eight-p section-two-p">
+                            The company name
+                            Addison Township, IL, USA.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="text-center">
+                        <div class="mb-3">
+                            <i class="far fa-envelope-open fa-2x content-yellow-color"></i>
+                        </div>
+                        <h4 class="section-two-h4 mb-3">Phone & Email</h4>
+                        <p class="section-eight-p section-two-p">
+                            +(122) 123 456 7890
+
+                            info@examplemail.com
+                        </p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="text-center">
+                        <div class="mb-3">
+                            <i class="fas fa-building fa-2x content-yellow-color"></i>
+                        </div>
+                        <h4 class="section-two-h4 mb-3">Our Branches</h4>
+                        <p class="section-eight-p section-two-p">
+                            india<br />
+                            china
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-md-6 contact">
+                    <form method="POST">
+                        <div class="form-group ">
+                            <input type="text" class="form-control styling-form-grp" placeholder="Name" />
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control styling-form-grp" placeholder="Email" />
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" class="form-control styling-form-grp" placeholder="Phone" />
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control styling-form-grp" placeholder="Message" rows="3"
+                                required=""></textarea>
+                        </div>
+                        <button type="submit" class="btn submit">Submit</button>
+                    </form>
+                </div>
+                <div class="col-md-6">
+                    <div>
+                        <img src="./images/c1.jpg" class="user-image" alt="user-image">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!----------------------------- //section8 ----------------------------->
+    <!----------------------------- //sections ----------------------------->
+
+    <!----------------------------- map ----------------------------->
+    <section class="map p-2">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6719443.4354164805!2d6.142641213276043!3d34.261953103958334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x130275759ac9d10d%3A0x698e3915682cef7d!2sSousse!5e0!3m2!1sfr!2stn!4v1568641062741!5m2!1sfr!2stn"
+            width="100%" height="450">
+        </iframe>
+    </section>
+    <!----------------------------- //map ----------------------------->
+
+    <!----------------------------- footer ----------------------------->
+    <footer class="styling-footer">
+        <div class="container py-5">
+            <h1 class=" text-center mb-4">
+                <a class="navbar-brand footer-h1" href="index.html">
+                    <span class="fab fa-free-code-camp "></span>
+                    <span class="content-white-color">TRIP SPOT</span>
+                </a>
+            </h1>
+            <div class="row">
+                <div class="col-sm-3 col-lg-3 content-white-color">
+                    <h3 class="mb-4">Links</h3>
+                    <ul>
+                        <li class="mb-3">
+                            <a class="link-footer content-white-color" href="#aboutUS">
+                                <i class="fas fa-angle-double-right pr-3"></i>Our Mission
+                            </a>
+                        </li>
+                        <li class="mb-3">
+                            <a class="link-footer content-white-color" href="#gallery">
+                                <i class="fas fa-angle-double-right pr-3"></i>Latest Tours
+                            </a>
+                        </li>
+                        <li class="mb-3">
+                            <a class="link-footer content-white-color" href="#index">
+                                <i class="fas fa-angle-double-right pr-3"></i>Explore
+                            </a>
+                        </li>
+                        <li class="mb-3">
+                            <a class="link-footer content-white-color" href="#contactUs">
+                                <i class="fas fa-angle-double-right pr-3"></i>Find us
+                            </a>
+                        </li>
+                        <li class="mb-3">
+                            <a class="link-footer content-white-color" href="#index">
+                                <i class="fas fa-angle-double-right pr-3"></i>privacy policy
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-3 col-lg-3 content-white-color">
+                    <h3 class="mb-4">Navigation</h3>
+                    <ul>
+                        <li class="mb-3">
+                            <a class="link-footer content-white-color" href="#index">
+                                <i class="fas fa-angle-double-right pr-3"></i>Home
+                            </a>
+                        </li>
+                        <li class="mb-3">
+                            <a class="link-footer content-white-color" href="#aboutUS">
+                                <i class="fas fa-angle-double-right pr-3"></i>About Us
+                            </a>
+                        </li>
+                        <li class="mb-3">
+                            <a class="link-footer content-white-color" href="#services">
+                                <i class="fas fa-angle-double-right pr-3"></i>More services
+                            </a>
+                        </li>
+                        <li class="mb-3">
+                            <a class="link-footer content-white-color" href="#team">
+                                <i class="fas fa-angle-double-right pr-3"></i>Team
+                            </a>
+                        </li>
+                        <li class="mb-3">
+                            <a class="link-footer content-white-color" href="#contactUs">
+                                <i class="fas fa-angle-double-right pr-3"></i>Contact Us
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-3 col-lg-3 content-white-color">
+                    <h3 class="mb-4">Customer Care</h3>
+                    <ul>
+                        <li class="mb-3">
+                            <a class="link-footer content-white-color" href="#aboutUS">
+                                <i class="fas fa-angle-double-right pr-3"></i>Our Mission
+                            </a>
+                        </li>
+                        <li class="mb-3">
+                            <a class="link-footer content-white-color" href="#gallery">
+                                <i class="fas fa-angle-double-right pr-3"></i>Latest Tours
+                            </a>
+                        </li>
+                        <li class="mb-3"><i class="fas fa-angle-double-right pr-3"></i>Explore</li>
+                        <li class="mb-3"><i class="fas fa-angle-double-right pr-3"></i>Find us</li>
+                        <li class="mb-3"><i class="fas fa-angle-double-right pr-3"></i>Privacy Policy</li>
+                    </ul>
+                </div>
+                <div class="col-sm-3 col-lg-3 content-white-color">
+                    <h3 class="mb-4">Contact Us</h3>
+                    <p class="mb-3"> info@example.com</p>
+                    <p class="mb-3"> + 456 123 7890</p>
+                    <p class="mb-3"> + 90 nsequursu dsdesdc,
+                        Honey Street 049436.</p>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <div class="final-section text-center py-4">
+            © 2019 Trip Spot. All Rights Reserved 
+            <a class="link-footer content-white-color" href="#index"><span class="top"><i class="fas fa-angle-up"></i></span></a>
+    </div>
+    <!----------------------------- //footer ----------------------------->
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
